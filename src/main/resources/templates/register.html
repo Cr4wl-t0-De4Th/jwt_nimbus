@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Đăng ký</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        body {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .register-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 40px;
+            width: 100%;
+            max-width: 420px;
+        }
+        .register-card h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            font-weight: 700;
+        }
+        .form-label {
+            font-weight: 600;
+            color: #555;
+        }
+        .btn-success {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            color: #fff;
+        }
+        .btn-success:hover {
+            opacity: 0.9;
+        }
+        .link-text {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .link-text a {
+            color: #11998e;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .link-text a:hover {
+            text-decoration: underline;
+        }
+        #registerAlert {
+            display: none;
+        }
+        #registerSuccess {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-card">
+        <h2>📝 Đăng Ký Tài Khoản</h2>
+        <div id="registerAlert" class="alert alert-danger" role="alert"></div>
+        <div id="registerSuccess" class="alert alert-success" role="alert"></div>
+        <form>
+            <div class="mb-3">
+                <label for="fullName" class="form-label">Họ và Tên</label>
+                <input type="text" class="form-control" name="fullName" id="fullName" placeholder="Nhập họ và tên" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Nhập email của bạn" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Nhập mật khẩu" required autocomplete="off">
+            </div>
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Xác nhận mật khẩu</label>
+                <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Nhập lại mật khẩu" required autocomplete="off">
+            </div>
+            <div class="d-grid">
+                <button id="Register" type="button" class="btn btn-success">Đăng Ký</button>
+            </div>
+        </form>
+        <div class="link-text">
+            <p>Đã có tài khoản? <a href="/login">Đăng nhập</a></p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="/js/mainjs.js"></script>
+</body>
+</html>
